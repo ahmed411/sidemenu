@@ -1,0 +1,246 @@
+.component-text {
+  text-decoration: beige;
+  text-align: center;
+  font-size: 25pt;
+  /* justify-content: center; */
+  margin-top: 50px;
+}
+
+.text-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.txt-field {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid rgb(65, 63, 63);
+}
+.btn {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .txt-field {
+    margin: 10px 0;
+  }
+
+  .text-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.box-container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 20px;
+  /* grid-gap: 10px 2em; */
+  margin-top: 2%;
+  margin-left: 8%;
+  /* margin-right: 5%; */
+}
+.box-content {
+  height: 100px;
+  text-align: center;
+  color: #000000;
+  border: 2px solid rgb(0, 0, 0);
+  position: relative;
+}
+.box-text {
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box-content:nth-child(3n + 0) {
+  border: 2px solid rgb(230, 47, 47);
+}
+
+.navbar {
+  /* background-color: #589cb4; */
+  background-color: #2e3b55;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+  /* color: rgb(22, 13, 1); */
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.nav-menu {
+  /* background-color: #589cb4; */
+  background-color: #2e3b55;
+  width: 200px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+nav-text a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: #6a6e6e;
+}
+.nav-menu-items {
+  width: 100%;
+}
+.navbar-toggle {
+  /* background-color: #589cb4; */
+  background-color: #2e3b55;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menu-name {
+  text-decoration: none;
+  margin-left: 16px;
+  font-size: 16pt;
+
+  color: #f5f5f5;
+}
+.theme-mode {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  /* border: 3px solid #73ad21; */
+  /* padding: 10px; */
+}
+.dark-mode {
+  background-color: #201d1d;
+  color: #999;
+  height: 100%;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.light-mode {
+  background-color: #fff;
+  color: #333;
+  height: 100%;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 14px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #19a2c1;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch-checkbox {
+  padding: 10px;
+}
